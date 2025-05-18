@@ -396,32 +396,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- Audio Element -->
-    <audio id="stadium-anthem" loop>
-      <source src="stadium-anthem.mp3" type="audio/mpeg" />
-    </audio>
-
-    <script>
-      const audioSwitch = document.getElementById("audio-switch");
-      const audio = document.getElementById("stadium-anthem");
-
-      // Play by default if checked
-      if (audioSwitch.checked) audio.play();
-
-      audioSwitch.addEventListener("change", () => {
-        if (audioSwitch.checked) {
-          audio.play();
-        } else {
-          audio.pause();
-        }
-      });
-    </script>
-    <script>
-      window.addEventListener("load", () => {
-        const loader = document.querySelector(".loader-wrapper");
-        if (loader) loader.style.display = "none";
-      });
-    </script>
   </body>
 </html>
