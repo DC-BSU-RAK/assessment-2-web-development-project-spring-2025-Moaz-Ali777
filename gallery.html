@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Legends Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Gallery Styles */
+    .gallery-hero {
+      height: 50vh;
+      background: url('stadium-wide.jpg') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .gallery-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .gallery-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+    }
+    .gallery-container {
+      padding: 40px 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .gallery-filter {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .filter-btn {
+      padding: 8px 20px;
+      background: #f0f0f0;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .filter-btn.active {
+      background: #2c3e50;
+      color: white;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .player-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+    }
+    .player-tag img {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+    }
+    .close-lightbox {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation (same as your main page) -->
+  <nav class="glass-nav">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="football.jpg" alt="Football Legends">
+        <span>FOOTBALL LEGENDS</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="legends.html"><i class="fas fa-users"></i> Legends</a>
+        <a href="stats.html"><i class="fas fa-chart-bar"></i> Stats</a>
+        <a href="gallery.html" class="active"><i class="fas fa-images"></i> Gallery</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Gallery Hero -->
+  <section class="gallery-hero">
+    <div class="gallery-hero-content">
+      <h1>Iconic Football Moments</h1>
+      <p>Relive football's greatest highlights</p>
+    </div>
+  </section>
+
+  <!-- Gallery Content -->
+  <section class="gallery-container">
+    <div class="gallery-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="messi">Messi</button>
+      <button class="filter-btn" data-filter="ronaldo">Ronaldo</button>
+      <button class="filter-btn" data-filter="pele">Pelé</button>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item" data-category="messi">
+        <img src="messi wc.jpg" alt="Messi World Cup">
+        <div class="player-tag">
+          <img src="argentina.jpg" alt="Argentina">
+          <span>Messi</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="ronaldo">
+        <img src="ronaldo.jpg" alt="Ronaldo UCL">
+        <div class="player-tag">
+          <img src="portugal.jpg" alt="Portugal">
+          <span>Ronaldo</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="pele">
+        <img src="pele1.jpg" alt="Pelé 1970">
+        <div class="player-tag">
+          <img src="brazil.png" alt="Brazil">
+          <span>Pelé</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="messi">
+        <img src="messibarca.jpg" alt="Messi Barcelona">
+        <div class="player-tag">
+          <img src="argentina.jpg" alt="Argentina">
+          <span>Messi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- Footer (same as your main page) -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <!-- Footer content -->
+    </div>
+  </footer>
+
+  <script>
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.gallery-item').forEach(item => {
+          item.style.display = filter === 'all' || item.dataset.category.includes(filter) ? 'block' : 'none';
+        });
+      });
+    });
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+    
+    document.querySelector('.close-lightbox').addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football Legends | Greatest Players of All Time</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts.js"></script>
+
+    <link rel="icon" href="soccer.jpg" type="image/png" />
+  </head>
+  <body>
+    <!-- Floating Audio Control -->
+    <div class="audio-control">
+      <i class="fas fa-music"></i>
+      <span>Stadium Anthem</span>
+      <div class="audio-toggle">
+        <input type="checkbox" id="audio-switch" checked />
+        <label for="audio-switch" class="audio-switch"></label>
+      </div>
+    </div>
+
+    <!-- Audio File -->
+    <audio id="stadium-audio" src="stadium-anthem.mp3" loop></audio>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img src="football.jpg" alt="Football Legends" />
+          <span>FOOTBALL LEGENDS</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html" class="active"
+            ><i class="fas fa-home"></i> Home</a
+          >
+          <a href="legends.html"><i class="fas fa-users"></i> Legends</a>
+          <a href="stats.html"><i class="fas fa-chart-bar"></i> Stats</a>
+          <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+          <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+
+        <div class="nav-mobile-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-video">
+        <video autoplay muted loop>
+          <source src="videos/hero-football.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="title-line">Celebrating The</span>
+          <span class="title-line highlight">Greatest Footballers</span>
+          <span class="title-line">Of All Time</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Explore the careers, achievements, and legacies of the players who
+          defined the beautiful game
+        </p>
+
+        <div class="hero-cta">
+          <a href="legends.html" class="cta-btn primary">
+            <span>View Legends</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#featured" class="cta-btn secondary">
+            <span>Featured Players</span>
+            <i class="fas fa-chevron-down"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <span>Scroll Down</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </header>
+
+    <!-- Featured Players Section -->
+    <section id="featured" class="featured-players">
+      <div class="section-header">
+        <h2 class="section-title">Featured <span>Legends</span></h2>
+        <p class="section-subtitle">
+          The most iconic players in football history
+        </p>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="players-grid">
+        <!-- Player Card 1 -->
+        <div class="player-card">
+          <div class="player-image">
+            <img src="messi.jpg" alt="Lionel Messi" />
+            <div class="player-nationality">
+              <img src="argentina.jpg" alt="Argentina" />
+            </div>
+          </div>
+
+          <div class="player-info">
+            <h3 class="player-name">Lionel Messi</h3>
+            <p class="player-position">Forward | Argentina</p>
+
+            <div class="player-stats">
+              <div class="stat">
+                <span class="stat-value">800+</span>
+                <span class="stat-label">Goals</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">7</span>
+                <span class="stat-label">Ballon d'Or</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">2022</span>
+                <span class="stat-label">World Cup</span>
+              </div>
+            </div>
+
+            <div class="player-bio">
+              <p>
+                Lionel Messi is a legendary footballer known for his
+                extraordinary dribbling, vision, and goal-scoring ability. A
+                left-footed maestro, he combined low center of gravity with
+                unmatched control, making it almost impossible for defenders to
+                dispossess him. He wasn't just a prolific scorer but also an
+                elite playmaker, capable of threading impossible passes and
+                orchestrating the game from deep or advanced positions. Calm,
+                consistent, and creative, Messi played with elegance and
+                intelligence, earning admiration worldwide for both his talent
+                and humble personality. His style blended artistry with
+                efficiency, redefining what it means to be a complete attacking
+                player.
+              </p>
+            </div>
+
+            <a href="legends.html#messi" class="player-btn">
+              View Profile
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Player Card 2 -->
+        <div class="player-card">
+          <div class="player-image">
+            <img src="ronaldo1.jpg" alt="Cristiano Ronaldo" />
+            <div class="player-nationality">
+              <img src="portugal.jpg" alt="Portugal" />
+            </div>
+          </div>
+
+          <div class="player-info">
+            <h3 class="player-name">Cristiano Ronaldo</h3>
+            <p class="player-position">Forward | Portugal</p>
+
+            <div class="player-stats">
+              <div class="stat">
+                <span class="stat-value">850+</span>
+                <span class="stat-label">Goals</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">5</span>
+                <span class="stat-label">Ballon d'Or</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">2016</span>
+                <span class="stat-label">Euro Cup</span>
+              </div>
+            </div>
+
+            <div class="player-bio">
+              <p>
+                The Portuguese powerhouse known for his athleticism and
+                goal-scoring prowess. All-time leading scorer in men's
+                international football.
+              </p>
+            </div>
+
+            <a href="legends.html#ronaldo" class="player-btn">
+              View Profile
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Player Card 3 -->
+        <div class="player-card">
+          <div class="player-image">
+            <img src="pele1.jpg" alt="Pelé" />
+            <div class="player-nationality">
+              <img src="brazil.png" alt="Brazil" />
+            </div>
+          </div>
+
+          <div class="player-info">
+            <h3 class="player-name">Pelé</h3>
+            <p class="player-position">Forward | Brazil</p>
+
+            <div class="player-stats">
+              <div class="stat">
+                <span class="stat-value">1000+</span>
+                <span class="stat-label">Goals</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">3</span>
+                <span class="stat-label">World Cups</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">1283</span>
+                <span class="stat-label">Career Games</span>
+              </div>
+            </div>
+
+            <div class="player-bio">
+              <p>
+                The Brazilian king of football with three World Cup victories.
+                FIFA named him the greatest player of the 20th century.
+              </p>
+            </div>
+
+            <a href="legends.html#pele" class="player-btn">
+              View Profile
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-footer">
+        <a href="legends.html" class="view-all-btn">
+          View All Legends
+          <i class="fas fa-long-arrow-alt-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Stats Preview Section -->
+    <section class="stats-preview">
+      <div class="stats-container">
+        <div class="stats-content">
+          <h2 class="stats-title">By The <span>Numbers</span></h2>
+          <p class="stats-text">
+            Compare the greatest players through detailed statistics and
+            achievements.
+          </p>
+          <a href="stats.html" class="stats-btn">
+            Explore Statistics
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="stats-visualization">
+          <div class="radar-chart-container">
+            <!-- This would be replaced with an actual chart in JS -->
+            <div class="radar-chart">
+              <div class="chart-legend">
+                <span>Goals</span>
+                <span>Trophies</span>
+                <span>Assists</span>
+                <span>Skill</span>
+                <span>Impact</span>
+              </div>
+              <div class="chart-area">
+                <div class="chart-messi"></div>
+                <div class="chart-ronaldo"></div>
+                <div class="chart-pele"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Preview Section -->
+    <section class="gallery-preview">
+      <div class="section-header">
+        <h2 class="section-title">Iconic <span>Moments</span></h2>
+        <p class="section-subtitle">Relive football's greatest highlights</p>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="gallery-grid">
+        <a href="gallery.html" class="gallery-item">
+          <img src="messi wc.jpg" alt="Messi World Cup" />
+          <div class="gallery-overlay">
+            <h3>Messi's World Cup Triumph</h3>
+            <p>2022 Final - Argentina vs France</p>
+          </div>
+        </a>
+
+        <a href="gallery.html" class="gallery-item">
+          <img src="ronaldo.jpg" alt="Ronaldo Champions League" />
+          <div class="gallery-overlay">
+            <h3>Ronaldo's UCL Dominance</h3>
+            <p>Real Madrid's 2017 Victory</p>
+          </div>
+        </a>
+
+        <a href="gallery.html" class="gallery-item">
+          <img src="pele.jpg" alt="Pelé 1970 World Cup" />
+          <div class="gallery-overlay">
+            <h3>Pelé's World Cup Magic</h3>
+            <p>1970 Final - Brazil vs Italy</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="newsletter-container">
+        <div class="newsletter-content">
+          <h2>Stay Updated</h2>
+          <p>
+            Subscribe to our newsletter for weekly updates on football history
+            and legends.
+          </p>
+        </div>
+
+        <form class="newsletter-form" id="newsletter-form">
+          <div class="form-group">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">
+              Subscribe
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="form-agreement">
+            <input type="checkbox" id="newsletter-agree" required />
+            <label for="newsletter-agree"
+              >I agree to receive emails about football legends</label
+            >
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="football.jpg" alt="Football Legends" />
+          <p>
+            Celebrating the greatest football players of all time through
+            comprehensive profiles, statistics, and memorable moments.
+          </p>
+
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="legends.html">Legends</a></li>
+            <li><a href="stats.html">Statistics</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-legends">
+          <h3>Top Legends</h3>
+          <ul>
+            <li><a href="legends.html#messi">Lionel Messi</a></li>
+            <li><a href="legends.html#ronaldo">Cristiano Ronaldo</a></li>
+            <li><a href="legends.html#pele">Pelé</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> info@footballlegends.com</li>
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> 123 Football Ave, Sports
+              City
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Football Legends. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Audio Element -->
+    <audio id="stadium-anthem" loop>
+      <source src="stadium-anthem.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script>
+      const audioSwitch = document.getElementById("audio-switch");
+      const audio = document.getElementById("stadium-anthem");
+
+      // Play by default if checked
+      if (audioSwitch.checked) audio.play();
+
+      audioSwitch.addEventListener("change", () => {
+        if (audioSwitch.checked) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      });
+    </script>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader-wrapper");
+        if (loader) loader.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
